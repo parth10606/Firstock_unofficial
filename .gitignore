@@ -1,0 +1,4 @@
+firstock_venv
+__pycache__
+*.pyc 
+test.py
