@@ -3,7 +3,7 @@ import websocket
 import threading
 import time 
 from ._websocket_enums import MessageTopic
-
+from ._logger import log
 
 def send_ws_message(self,payload):
     self.ws.send(payload)
@@ -30,17 +30,17 @@ def on_message(self,ws, message):
 
 
 def on_error(self,ws, error):
-    print(error)
+    log.info(error)
     
 
 def on_close(self,ws, close_status_code, close_msg):
-    print("Websocket Closed")
+    log.info("##Websocket Closed##")
     
     if self.websocket_close_handler !=None:
         self.websocket_close_handler(close_msg)
 
 def on_open(self,ws):
-    print("Opened connection")
+    log.info("##Opened websocket connection##")
     self.connect_ws()
     if self.websocket_open_handler !=None:
         self.websocket_open_handler()
@@ -57,9 +57,22 @@ def connect_ws(self):
     
 
 def Heartbeat(self):
+    global exception
+    exception=False
     while not self.stop_heartbeat:
-        self.connect_ws()
-        time.sleep(30)
+        try:
+            self.connect_ws()
+            time.sleep(30)
+        except Exception as e:
+            log.info('Exception Occured in Heartbeat')
+            log.info(e)
+            exception=True
+            break
+    
+    if exception:
+        log.info('Stoping Websocket')
+        self.stop_websocket(True)
+
 
 
 def start_websocket(self,websocket_open_handler=None,websocket_close_handler=None,feed_message_handler=None,error_message_handler=None,order_feed_message_handler=None,depth_feed_message_handler=None):
@@ -86,11 +99,16 @@ def start_websocket(self,websocket_open_handler=None,websocket_close_handler=Non
     self.heartbeat_thread.start()
 
 
-def stop_websocket(self):
-    self.ws.close()
+def stop_websocket(self,exception=False):
     self.stop_heartbeat = True
+    time.sleep(1)
     self.heartbeat_thread.join()
+    if not exception:
+        self.ws.close()     
     self.ws_thread.join()
+    if exception:
+        log.info('Restarting Websocket...')
+        self.start_websocket(websocket_open_handler=self.websocket_open_handler,websocket_close_handler=self.websocket_close_handler,feed_message_handler=self.feed_message_handler,error_message_handler=self.error_message_handler,order_feed_message_handler=self.order_feed_message_handler,depth_feed_message_handler=self.depth_feed_message_handler)
     
 
 def subscribe_token(self,data:list):

@@ -1,0 +1,13 @@
+2023-04-06 11:41:04,618 : INFO | FILENAME : _logging | FUNCTION : info | LINE : 74 | MESSAGE: Websocket connected
+2023-04-06 11:41:04,619 : INFO | FILENAME : _logger | FUNCTION : info | LINE : 31 | MESSAGE: ##Opened websocket connection##
+2023-04-06 11:41:04,660 : INFO | FILENAME : _logger | FUNCTION : info | LINE : 31 | MESSAGE: Connection Successfull...
+2023-04-06 11:41:06,501 : INFO | FILENAME : _logger | FUNCTION : info | LINE : 31 | MESSAGE: Subscribed to - Exchange:NSE Token:26000
+2023-04-06 11:41:06,502 : INFO | FILENAME : _logger | FUNCTION : info | LINE : 31 | MESSAGE: Subscribed to - Exchange:NFO Token:44256
+2023-04-06 11:41:36,442 : INFO | FILENAME : _logger | FUNCTION : info | LINE : 31 | MESSAGE: ##Websocket Closed##
+
+
+2023-04-06 11:43:27,251 : INFO | FILENAME : _logging | FUNCTION : info | LINE : 74 | MESSAGE: Websocket connected
+2023-04-06 11:43:27,252 : INFO | FILENAME : _logger | FUNCTION : info | LINE : 31 | MESSAGE: ##Opened websocket connection##
+2023-04-06 11:43:27,298 : INFO | FILENAME : _logger | FUNCTION : info | LINE : 31 | MESSAGE: Connection Successfull...
+2023-04-06 11:43:29,160 : INFO | FILENAME : _logger | FUNCTION : info | LINE : 31 | MESSAGE: Subscribed to - Exchange:NSE Token:26000
+2023-04-06 11:43:29,160 : INFO | FILENAME : _logger | FUNCTION : info | LINE : 31 | MESSAGE: Subscribed to - Exchange:NFO Token:44256
