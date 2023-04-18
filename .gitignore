@@ -2,3 +2,5 @@ firstock_venv
 __pycache__
 *.pyc 
 test.py
+firstock_error.log
+firstock_output.log

@@ -120,3 +120,6 @@ def option_greek(self,expiryDate='',strikePrice='',spotPrice='',initRate='',vola
     if res['status'] != 'Success':
         return failure_response_handler('Option greek',res)
     return res['data']
+
+
+

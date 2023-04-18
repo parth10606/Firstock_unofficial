@@ -1,0 +1,43 @@
+LMT
+{'t': 'om', 'norenordno': '23041100003641', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23P17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'I', 'remarks': "Parth's Firstock Module", 'status': 'PENDING', 'reporttype': 'NewAck', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '', 'dscqty': '0'}
+
+{'t': 'om', 'norenordno': '23041100003641', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23P17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'I', 'remarks': "Parth's Firstock Module", 'status': 'PENDING', 'reporttype': 'PendingNew', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '', 'dscqty': '0'}
+
+{'t': 'om', 'norenordno': '23041100003641', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23P17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'I', 'remarks': "Parth's Firstock Module", 'status': 'OPEN', 'reporttype': 'New', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '1100000010310130', 'dscqty': '0', 'exch_tm': '11-04-2023 09:43:15'}
+
+{'t': 'om', 'norenordno': '23041100003641', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23P17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'I', 'remarks': "Parth's Firstock Module", 'status': 'COMPLETE', 'reporttype': 'Fill', 'flqty': '50', 'flprc': '50.60', 'flid': '87138880', 'fltm': '11-04-2023 09:43:15', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '1100000010310130', 'fillshares': '50', 'dscqty': '0', 'avgprc': '50.60', 'exch_tm': '11-04-2023 09:43:15'}
+
+
+
+MKT
+{'t': 'om', 'norenordno': '23041100003692', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23P17700', 'trantype': 'S', 'qty': '50', 'prc': '0.00', 'pcode': 'I', 'remarks': '', 'status': 'PENDING', 'reporttype': 'NewAck', 'prctyp': 'MKT', 'ret': 'DAY', 'exchordid': '', 'dscqty': '0'}
+
+{'t': 'om', 'norenordno': '23041100003692', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23P17700', 'trantype': 'S', 'qty': '50', 'prc': '0.00', 'pcode': 'I', 'remarks': '', 'status': 'PENDING', 'reporttype': 'PendingNew', 'prctyp': 'MKT', 'ret': 'DAY', 'exchordid': '', 'dscqty': '0'}
+
+{'t': 'om', 'norenordno': '23041100003692', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23P17700', 'trantype': 'S', 'qty': '50', 'prc': '0.00', 'pcode': 'I', 'remarks': '', 'status': 'OPEN', 'reporttype': 'New', 'prctyp': 'MKT', 'ret': 'DAY', 'exchordid': '1100000010410544', 'dscqty': '0', 'exch_tm': '11-04-2023 09:43:47'}
+
+{'t': 'om', 'norenordno': '23041100003692', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23P17700', 'trantype': 'S', 'qty': '50', 'prc': '0.00', 'pcode': 'I', 'remarks': '', 'status': 'COMPLETE', 'reporttype': 'Fill', 'flqty': '50', 'flprc': '51.50', 'flid': '87147394', 'fltm': '11-04-2023 09:43:47', 'prctyp': 'MKT', 'ret': 'DAY', 'exchordid': '1100000010410544', 'fillshares': '50', 'dscqty': '0', 'avgprc': '51.50', 'exch_tm': '11-04-2023 09:43:47'}
+
+
+
+SL-LMT 
+{'t': 'om', 'norenordno': '23041100004071', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23C17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'M', 'remarks': '', 'status': 'PENDING', 'reporttype': 'NewAck', 'prctyp': 'SL-LMT', 'ret': 'DAY', 'exchordid': '', 'dscqty': '0', 'trgprc': '64.00'}
+
+{'t': 'om', 'norenordno': '23041100004071', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23C17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'M', 'remarks': '', 'status': 'PENDING', 'reporttype': 'PendingNew', 'prctyp': 'SL-LMT', 'ret': 'DAY', 'exchordid': '', 'dscqty': '0', 'trgprc': '64.00'}
+
+{'t': 'om', 'norenordno': '23041100004071', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23C17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'M', 'remarks': '', 'status': 'TRIGGER_PENDING', 'reporttype': 'TriggerPending', 'prctyp': 'SL-LMT', 'ret': 'DAY', 'exchordid': '1000000013543548', 'dscqty': '0', 'trgprc': '64.00', 'exch_tm': '11-04-2023 09:51:03'}
+
+{'t': 'om', 'norenordno': '23041100004071', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23C17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'M', 'remarks': '', 'status': 'OPEN', 'reporttype': 'INVALID_REPORT_TYPE', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '1000000013543548', 'dscqty': '0', 'trgprc': '64.00', 'exch_tm': '11-04-2023 09:51:03'}
+
+
+Cancel order 
+{'t': 'om', 'norenordno': '23041100004071', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23C17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'M', 'remarks': '', 'status': 'PENDING', 'reporttype': 'PendingCancel', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '1000000013543548', 'dscqty': '0', 'trgprc': '64.00', 'exch_tm': '11-04-2023 09:51:03'}
+
+{'t': 'om', 'norenordno': '23041100004071', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23C17700', 'trantype': 'B', 'qty': '50', 'prc': '65.00', 'pcode': 'M', 'remarks': '', 'status': 'CANCELED', 'reporttype': 'Canceled', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '1000000013543548', 'cancelqty': '50', 'dscqty': '0', 'trgprc': '64.00', 'exch_tm': '11-04-2023 09:51:35'}
+
+Mofify order
+{'t': 'om', 'norenordno': '23041100004353', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23C17700', 'trantype': 'B', 'qty': '50', 'prc': '70.00', 'pcode': 'I', 'remarks': "Parth's Firstock Module", 'status': 'PENDING', 'reporttype': 'ModAck', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '1000000015351795', 'dscqty': '0', 'exch_tm': '11-04-2023 09:58:17'}
+
+{'t': 'om', 'norenordno': '23041100004353', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23C17700', 'trantype': 'B', 'qty': '50', 'prc': '70.00', 'pcode': 'I', 'remarks': "Parth's Firstock Module", 'status': 'PENDING', 'reporttype': 'PendingReplace', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '1000000015351795', 'dscqty': '0', 'exch_tm': '11-04-2023 09:58:17'}
+
+{'t': 'om', 'norenordno': '23041100004353', 'uid': 'OP1421', 'actid': 'OP1421', 'exch': 'NFO', 'tsym': 'NIFTY13APR23C17700', 'trantype': 'B', 'qty': '50', 'prc': '70.00', 'pcode': 'I', 'remarks': "Parth's Firstock Module", 'status': 'OPEN', 'reporttype': 'Replaced', 'prctyp': 'LMT', 'ret': 'DAY', 'exchordid': '1000000015351795', 'dscqty': '0', 'exch_tm': '11-04-2023 09:59:29'}
