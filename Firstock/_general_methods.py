@@ -1,6 +1,6 @@
 from ._send_requests import send
 from ._exception_handler import exception_handler,failure_response_handler
-
+from ._end_points import download_bse_eq_symbols,download_index_symbols,download_nfo_symbols,download_nse_eq_symbols
 
 @exception_handler
 def get_user_details(self)->dict:
@@ -123,3 +123,51 @@ def option_greek(self,expiryDate='',strikePrice='',spotPrice='',initRate='',vola
 
 
 
+@exception_handler
+def get_nfo_symbols(self):
+    print('Fetching NFO Data....')
+    res=send('GET',download_nfo_symbols)
+    with open('NFO_Symbols.csv','w') as f:
+        f.write(res.text)
+    print('Data received')
+
+@exception_handler
+def get_nse_symbols(self):
+    print('Fetching NSE Data....')
+    res=send('GET',download_nse_eq_symbols)
+    with open('NSE_Symbols.csv','w') as f:
+        f.write(res.text)
+    print('Data received')
+
+@exception_handler
+def get_bse_symbols(self):
+    print('Fetching BSE Data....')
+    res=send('GET',download_bse_eq_symbols)
+    with open('BSE_Symbols.csv','w') as f:
+        f.write(res.text)
+    print('Data received')
+
+@exception_handler
+def get_index_symbols(self):
+    print('Fetching Index Data....')
+    res=send('GET',download_index_symbols)
+    with open('Index_Symbols.csv','w') as f:
+        f.write(res.text)
+    print('Data received')
+
+@exception_handler
+def set_freeze_quantity(self, freeze_qty_obj=None):
+    """
+    To set freeze quantity 
+    Please provide your desired quantity
+    if you set freeze quantity for NIFTY as 500 and you place order for 1000 qty, two orders of 500 will be set to broker from place_order
+
+    NOTE: if freeze quantity is not set, It is by default the NSE freeze quantity. ONLY NIFTY, BANKNIFTY and FINNIFTY are set here by default.
+    To set freeze qunatity for other Derivates you need to refer to freeze quantity xls doc from NSE and set it here by passing object.
+    
+    """
+    if freeze_qty_obj is None:
+        return False
+    for key in freeze_qty_obj:
+        self.freeze_qty_data[key]=freeze_qty_obj[key]
+    return True

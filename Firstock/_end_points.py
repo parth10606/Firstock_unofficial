@@ -1,5 +1,11 @@
 root = 'https://connect.thefirstock.com/api/V3/'
-ws_endpoint = 'wss://norenapi.thefirstock.com/NorenWSTP'
+ws_endpoint = 'wss://norenapi.thefirstock.com/NorenWSTP/'
+
+download_nfo_symbols = "https://openapi.thefirstock.com/NFOSymbolDownload"
+download_nse_eq_symbols = "https://openapi.thefirstock.com/NSESymbolDownload"
+download_bse_eq_symbols = "https://openapi.thefirstock.com/BSESymbolDownload"
+download_index_symbols = "https://openapi.thefirstock.com/indexSymbols"
+download_freeze_quantity = "https://archives.nseindia.com/content/fo/qtyfreeze.xls"
 
 end_points={
     'login' :f'{root}login',

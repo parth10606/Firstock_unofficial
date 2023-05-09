@@ -20,8 +20,6 @@ def login(self,user_id='',password='',totp='',vender_code='',api_key='')->bool:
     
     self.jKey = res['data']['susertoken']
     self.actid = res['data']['actid']
-    print(self.jKey)
-    print('Login Success')
     return True
     
 
@@ -41,5 +39,4 @@ def logout(self)->bool:
         return failure_response_handler('Logout',res)
     
     self.jKey = ''
-    print('Logout Success')
     return True

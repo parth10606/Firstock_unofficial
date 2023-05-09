@@ -5,6 +5,7 @@ class Firstock:
         self.ws_thread = None
         self.hearbeat_thread = None
         self.ws = None
+        self.ws_connected = False
         self.stop_heartbeat = False
         self.feed_message_handler = None
         self.order_feed_message_handler = None
@@ -12,6 +13,11 @@ class Firstock:
         self.error_message_handler = None
         self.websocket_close_handler = None
         self.webscoket_open_handler = None
+        self.freeze_qty_data = {
+            'NIFTY':1800,
+            'FINNIFTY':1800,
+            'BANKNIFTY':900
+        }
            
     #authentication methods
     from ._authentication import login,logout
@@ -27,4 +33,4 @@ class Firstock:
     #extras
     from ._quotes import get_quote,get_quote_ltp,get_multi_quotes,get_multi_quotes_ltp
     from ._strategies import place_order_strategy
-    from ._general_methods import get_user_details,search_scrips,get_security_info,get_option_chain,get_index_list,span_calculator,time_price_series,option_greek
+    from ._general_methods import get_user_details,search_scrips,get_security_info,get_option_chain,get_index_list,span_calculator,time_price_series,option_greek,get_bse_symbols,get_index_symbols,get_nfo_symbols,get_nse_symbols,set_freeze_quantity

@@ -5,3 +5,5 @@ test.py
 firstock_error.log
 firstock_output.log
 response.txt
+*.csv
+*.xls

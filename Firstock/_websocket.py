@@ -4,6 +4,7 @@ import threading
 import time 
 from ._websocket_enums import MessageTopic
 from ._logger import log
+from ._end_points import ws_endpoint
 
 def send_ws_message(self,payload):
     self.ws.send(payload)
@@ -30,18 +31,19 @@ def on_message(self,ws, message):
 
 
 def on_error(self,ws, error):
-    log.info(error)
+    print(error)
     
 
 def on_close(self,ws, close_status_code, close_msg):
-    log.info("##Websocket Closed##")
-    
+    print("##Websocket Closed##")
+    self.ws_connected = False
     if self.websocket_close_handler !=None:
         self.websocket_close_handler(close_msg)
 
 def on_open(self,ws):
-    log.info("##Opened websocket connection##")
+    print("##Opened websocket connection##")
     self.connect_ws()
+    self.ws_connected = True
     if self.websocket_open_handler !=None:
         self.websocket_open_handler()
 
@@ -57,24 +59,18 @@ def connect_ws(self):
     
 
 def Heartbeat(self):
-    global exception
-    exception=False
-    while not self.stop_heartbeat:
-        try:
+    print('Starting Hearbeat')
+    try:
+        while not self.stop_heartbeat:
             self.connect_ws()
             time.sleep(30)
-        except Exception as e:
-            log.info('Exception Occured in Heartbeat')
-            log.info(e)
-            exception=True
-            break
-    
-    if exception:
-        log.info('Stoping Websocket')
+
+    except Exception as e:
+        print('Hearbeat failed....Restarting Websocket')
         self.stop_websocket(True)
 
 
-
+       
 def start_websocket(self,websocket_open_handler=None,websocket_close_handler=None,feed_message_handler=None,error_message_handler=None,order_feed_message_handler=None,depth_feed_message_handler=None):
     self.websocket_open_handler = websocket_open_handler
     self.websocket_close_handler=websocket_close_handler
@@ -83,7 +79,7 @@ def start_websocket(self,websocket_open_handler=None,websocket_close_handler=Non
     self.order_feed_message_handler =order_feed_message_handler
     self.depth_feed_message_handler = depth_feed_message_handler
 
-    self.ws = websocket.WebSocketApp("wss://norenapi.thefirstock.com/NorenWSTP/",
+    self.ws = websocket.WebSocketApp(ws_endpoint,
                                 on_open=self.on_open,
                                 on_message=self.on_message,
                                 on_error=self.on_error,
@@ -99,15 +95,15 @@ def start_websocket(self,websocket_open_handler=None,websocket_close_handler=Non
     self.heartbeat_thread.start()
 
 
+
 def stop_websocket(self,exception=False):
     self.stop_heartbeat = True
-    time.sleep(1)
-    self.heartbeat_thread.join()
-    if not exception:
-        self.ws.close()     
-    self.ws_thread.join()
+    # self.heartbeat_thread.join()
+    if not exception and self.ws_connected:
+        self.ws.close()  
+    # self.ws_thread.join()
     if exception:
-        log.info('Restarting Websocket...')
+        print('Restarting Websocket...')
         self.start_websocket(websocket_open_handler=self.websocket_open_handler,websocket_close_handler=self.websocket_close_handler,feed_message_handler=self.feed_message_handler,error_message_handler=self.error_message_handler,order_feed_message_handler=self.order_feed_message_handler,depth_feed_message_handler=self.depth_feed_message_handler)
     
 
